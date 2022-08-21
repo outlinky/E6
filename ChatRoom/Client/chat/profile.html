@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% extends "chat/base.html" %}
+{% load static %}
+
+
+{% block head_title %}ChatRoom{% endblock head_title%}
+
+
+{% block content %}
+
+<div class="profile">
+    <div class="ava">
+        <img src="" alt="avatar" width="200" id="ava_image">
+        <input name="img" type="file" size="40" id="file_attach" title=" ">
+    </div>
+</div>
+{% endblock content %}
+
+
+{% block script %}
+<script src="{%static 'js/const.js' %}" type="module"></script>
+<script src="{%static 'js/profile.js' %}" type="module"></script>
+{% endblock script %}

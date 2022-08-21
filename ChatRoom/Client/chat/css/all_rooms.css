@@ -1,0 +1,142 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.header {
+    color: rgb(107, 78, 238);
+    text-align: center;
+    margin: 2%;
+}
+
+.image_container {
+    width: 95%;
+    margin: 2%;
+    border: 5px solid #177acc;
+    background-color: #177acc;
+    overflow: hidden;
+}
+
+.slaider {
+    display: flex;
+    transition: 0.4s all ease-in-out;
+}
+
+.image_container img {
+    min-width: 33.33333%;
+    display: block;
+    padding: 0.1% 0.4% 0.1% 0%;
+}
+
+.btn_warp {
+    display: inline-flex;
+    margin: 2%;
+    justify-content: space-between;
+}
+
+.btn {
+    /* padding: 10px; */
+    background-color: rgb(209, 210, 212);
+    color: rgb(7, 177, 35);
+    font-size: 30px;
+    border-radius: 20%;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: rgb(30, 88, 206);
+}
+
+.btn_left {
+    margin-right: 15%;
+}
+
+.btn_right {
+    margin-left: 15%;
+}
+
+.card {
+    min-width: 33%;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.1% 0.4% 0.1% 0%;
+    background: radial-gradient(#e3e66c, #a4e49b);
+    border: 5px solid #177acc;
+}
+.card h2 {
+    margin-top: 2%;
+}
+.owner {
+    min-width: 50%;
+    min-height: 55%;
+    margin: 2%;
+    background-color: #10ced4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10%;
+    padding: 1%;
+}
+
+.owner h2 {
+    color: beige;
+    text-align: center;
+}
+
+.enter {
+    margin-left: 1%;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+}
+    .enter a {
+        text-decoration: none;
+        color: beige;
+    }
+.delete {
+    margin-left: 1%;
+    background-color: #b13742;;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.btns {
+    margin-top: 2%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.create {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-right: -77%;
+    background-color: rgb(241, 241, 21);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.bt:active { /* Добавляем псевдокласс :active */
+    border: 1px solid hsl(5, 40%, 70%); /* Уменьшаем толщину рамки */
+    background-color: rgb(21, 241, 58);
+    }
+

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+
+    <meta property="og:title" content="ChatRoom">
+    <meta property="og:site_name" content="ChatRoom">
+    <meta property="og:url" content="http://195.149.87.162:7000/">
+    <meta property="og:description" content="ChatRoom">
+    <meta property="og:image" content="https://st.depositphotos.com/1008768/4671/i/950/depositphotos_46719647-stock-photo-live-chat.jpg">
+    <meta property="og:image:width" content="968">
+    <meta property="og:image:height" content="504">
+
+    <link rel="stylesheet" href="{%static 'css/index.css' %}">
+    <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.ico' %}">
+    {% block css %}{% endblock css %}
+
+    <title>{% block head_title %}{% endblock head_title%}</title>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="inner-header">
+            <div class="title">
+                <a href="{% url 'index' %}">
+                    ChatRoom
+                </a>
+            </div>
+            <ul class="menu">
+                <a href="{% url 'profile' %}">
+                    <li>Личный кабинет</li>
+                </a>
+                <a href="{% url 'all_rooms' %}">
+                    <li>Комнаты</li>
+                </a>
+                {% if user.is_authenticated %}
+                <a href="{% url 'account_logout' %}">
+                    <li>Выйти</li>
+                </a>
+                {% else %}
+                <a href="{% url 'account_login' %}">
+                    <li>Войти/Регистрация</li>
+                </a>
+                {% endif %}
+            </ul>
+        </div>
+    </header>
+
+    <div class="container">
+        {% block content %}
+        {% endblock content %}
+    </div>
+
+    <footer>
+        <div class="inner-footer">
+            <div class="link">
+                <a href="https://github.com/Doszhan-M" target="_blank"><img src="{%static 'img/Github_icon.png' %}"
+                        alt="pic"></a>
+            </div>
+            <span class="copy">
+                ChatRoom 2021
+            </span>
+        </div>
+    </footer>
+
+    {% block script %}{% endblock script %}
+
+</body>
+
+</html>

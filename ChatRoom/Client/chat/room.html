@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% extends "chat/base.html" %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{%static 'css/room.css' %}">
+{% endblock css %}
+{% block head_title %}ChatRoom{% endblock head_title%}
+
+<body>
+
+    {% block content %}
+    <div class="room">
+        {{ room_name|json_script:"room-name" }}
+
+        <div class="chat_user">
+            <h1>Чат с пользователем:</h1>
+            <img class="image" width="150" id="ava">
+            <h1 id="name"></h1>
+            <h4 id="age"></h4>
+            <p id="location" style="text-decoration:underline"></p>
+            <p class="self">О себе:</p>
+            <div id="description" class="description"></div>
+        </div>
+
+        <div class="chat_box">
+            <div class="chat">
+
+            </div>
+            <input type="text" class="message"><br>
+            <button type="button" class="jbtn">Отправить</button>
+        </div>
+    </div>
+    {% endblock content %}
+
+    {% block script %}
+    <script src="{%static 'js/const.js' %}" type="module"></script>
+    <script src="{%static 'js/room.js' %}" type="module"></script>
+    {% endblock script %}
+
+</body>

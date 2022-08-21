@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% extends "chat/base.html" %}
+{% load static %}
+
+
+{% block css %}
+<link rel="stylesheet" href="{%static 'css/all_rooms.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+{% endblock css %}
+
+
+{% block head_title %}ChatRoom{% endblock head_title%}
+
+
+{% block content %}
+
+<div class="main">
+    
+    <h1 class="header">Здесь вы можете присоединиться к общественным комнатам других пользователей, либо создать или удалить свою комнату</h1>
+    <button class="bt create" type="button">Создать комнату</button>
+
+    <div class="image_container">
+        <div class="slaider">
+            
+        </div>
+    </div>
+
+    <div class="btn_warp">
+        <button class="btn btn_left"><i class="fas fa-angle-double-left"></i></button>
+        <button class="btn btn_right"><i class="fas fa-angle-double-right"></i></button>
+    </div>
+</div>
+
+{% endblock content %}
+
+
+{% block script %}
+<script src="{%static 'js/const.js' %}" type="module"></script>
+<script src="{%static 'js/all_rooms.js' %}" type="module"></script>
+{% endblock script %}
+

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form class="js-form" method="POST">
+        <p><b>text:</b><br>
+            <input name="text" type="text" title="Используйте числовой формат" pattern="^[0-9]+$">
+        </p>
+        <p><b>file:</b><br>
+            <input name="img" type="file" size="40" id="file_attach">
+        </p>
+        <p><button type="button" class="btn">Отправить</button></p>
+
+        <p><button type="button" class="btn_test">Test</button></p>
+    </form>
+    <script src="{%static 'js/photo.js' %}"></script>
+    
+</body>
+</html>

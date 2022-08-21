@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% extends "chat/base.html" %}
+{% load static %}
+
+
+{% block head_title %}ChatRoom{% endblock head_title%}
+
+{% block content %}
+
+<div class="main">
+    <div class="common_chat">
+        <h2>Общий Чат</h2>
+        <textarea id="chat-log" cols="100" rows="20">
+    </textarea><br>
+        <input id="chat-message-input" class="chat_input" type="text" size="100"><br>
+        <input id="chat-message-submit" class="chat_btn" type="button" value="Send">
+    </div>
+    <div class="users">
+        <h2>Список пользователей:</h2>
+    </div>
+</div>
+
+{% endblock content %}
+
+
+{% block script %}
+<script src="{%static 'js/const.js' %}" type="module"></script>
+<script src="{%static 'js/index.js' %}" type="module"></script>
+<script src="{%static 'js/websocket.js' %}" type="module"></script>
+{% endblock script %}
